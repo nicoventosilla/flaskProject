@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Editar Persona</title>
+</head>
+<body>
+
+<h1>Editar persona</h1>
+
+<form action="" method="post">
+    {{ persona_form.csrf_token }}
+    <p>
+        {{ persona_form.nombre.label }} {{ persona_form.nombre }}
+    </p>
+    <p>
+        {{ persona_form.apellido.label }} {{ persona_form.apellido }}
+    </p>
+    <p>
+        {{ persona_form.email.label }} {{ persona_form.email }}
+    </p>
+    <p>
+        <input type="submit" value="Editar">
+    </p>
+</form>
+
+<a href="{{ url_for('index') }}">Regresar al inicio</a>
+
+</body>
+</html>
